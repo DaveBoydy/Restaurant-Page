@@ -1,7 +1,6 @@
 import "./styles.css";
-import odinImage from "./odin-lined.png";
+import hero from "./hero";
 
-const image = document.createElement("img");
-image.src = odinImage;
+const content = document.querySelector("#content");
 
-document.body.appendChild(image);
+content.appendChild(hero());
