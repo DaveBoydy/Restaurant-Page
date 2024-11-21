@@ -12,10 +12,6 @@ const headNav = document.querySelector("#head-nav");
 headNav.addEventListener("click", (e) => {
   const target = e.target.id;
 
-  content.hasChildNodes()
-    ? content.removeChild(content.lastChild)
-    : console.log("I'm childless");
-
   switch (target) {
     case "home":
       addHeroContent();
@@ -27,18 +23,27 @@ headNav.addEventListener("click", (e) => {
       addContactContent();
       break;
     default:
-      console.log("default");
+      console.log("MissClick");
   }
 });
 
+function removeContent() {
+  content.hasChildNodes()
+    ? content.removeChild(content.lastChild)
+    : console.log("I'm childless");
+}
+
 function addHeroContent() {
+  removeContent();
   content.appendChild(hero());
 }
 
 function addMenuContent() {
+  removeContent();
   content.appendChild(menu());
 }
 
 function addContactContent() {
+  removeContent();
   content.appendChild(contact());
 }
