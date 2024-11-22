@@ -1,8 +1,7 @@
 :root {
-  /* add font Active-Grotesk */
-  --font-family: sans-serif, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", -apple-system;
+  --font-family: sans-serif, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    -apple-system;
   font-family: var(--font-family);
   color: #fff;
 }
@@ -24,13 +23,13 @@
   margin-top: 8px;
 }
 
-body {
-  width: 100vw;
-  height: 100vh;
+#container {
+  width: 100%;
+  min-height: 100vh;
   background-image: url("food-photographer-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: clamp(16px, 8vh, 64px);
+  padding: clamp(16px, 6vw, 64px);
   display: flex;
   flex-direction: column;
 }
@@ -52,7 +51,6 @@ body {
 #footer a:hover {
   text-decoration: underline dashed;
 }
-
 
 .header-title-logo {
   text-align: center;
@@ -78,6 +76,7 @@ body {
   background: none;
   border: none;
   padding: 0;
+  padding-bottom: 3px;
   color: #fff;
   cursor: pointer;
   margin-right: 24px;
@@ -92,6 +91,20 @@ body {
   flex-grow: 1;
 }
 
+.menu,
+.contact {
+  color: #000;
+  background-color: #fff;
+  margin: 80px auto;
+  padding: 32px 16px;
+  width: clamp(600px, 70%, 900px);
+  text-align: center;
+  border-radius: 33px;
+  -webkit-box-shadow: 0px 2px 32px 6px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 2px 32px 6px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 2px 32px 6px rgba(0, 0, 0, 0.7);
+}
+
 .hero-headline {
   font-size: clamp(2.5rem, 8vi, 5rem);
   text-align: center;
@@ -100,6 +113,21 @@ body {
 .hero-text {
   font-size: clamp(1.5rem, 1rem + 1.6vi, 2rem);
   margin-top: 48px;
+}
+
+.active {
+  border-bottom: 5px solid #fff;
+}
+
+.menu-hr {
+  margin: 16px auto;
+  border-top: 1px dashed;
+  max-width: 600px;
+}
+
+.menu-text {
+  margin: 16px auto;
+  max-width: 70ch;
 }
 
 @media (min-width: 1066px) {
